@@ -19,10 +19,15 @@ export default function Header() {
       }`}
     >
       <div className="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
-        <div className="flex items-center gap-2">
-          <span className="font-display-lg text-headline-md tracking-tighter text-on-surface">
-            DEUS
-          </span>
+        <div className="flex items-center">
+          <Image
+            src="/deus-logo.jpg"
+            alt="DEUS"
+            width={120}
+            height={48}
+            className="h-12 w-auto object-contain"
+            priority
+          />
         </div>
 
         <nav className="hidden md:flex items-center gap-xl">
