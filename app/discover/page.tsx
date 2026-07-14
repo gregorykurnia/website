@@ -1,25 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+type Tab = "personality" | "cognitive" | "neuro" | "simulation";
+
 export default function DiscoverPage() {
-  function switchTab(tab: string) {
-    const tabs = ["personality", "cognitive", "neuro", "simulation"];
-    tabs.forEach((t) => {
-      const content = document.getElementById(`${t}-content`);
-      const btn = document.getElementById(`tab-${t}`);
-      if (t === tab) {
-        content?.classList.remove("hidden");
-        btn?.classList.add("active-tab");
-        btn?.classList.remove("text-on-surface-variant", "hover:text-primary");
-      } else {
-        content?.classList.add("hidden");
-        btn?.classList.remove("active-tab");
-        btn?.classList.add("text-on-surface-variant", "hover:text-primary");
-      }
-    });
-  }
+  const [activeTab, setActiveTab] = useState<Tab>("personality");
 
   return (
     <>
@@ -106,41 +94,29 @@ export default function DiscoverPage() {
 
             {/* Tabs Navigation */}
             <div className="flex flex-wrap justify-center gap-2 mb-12 bg-surface-container-high p-2 rounded-full w-fit mx-auto overflow-x-auto">
-              <button
-                className="px-8 py-3 rounded-full font-label-md transition-all active-tab"
-                id="tab-personality"
-                onClick={() => switchTab("personality")}
-              >
-                Personality
-              </button>
-              <button
-                className="px-8 py-3 rounded-full font-label-md transition-all text-on-surface-variant hover:text-primary"
-                id="tab-cognitive"
-                onClick={() => switchTab("cognitive")}
-              >
-                Cognitive
-              </button>
-              <button
-                className="px-8 py-3 rounded-full font-label-md transition-all text-on-surface-variant hover:text-primary"
-                id="tab-neuro"
-                onClick={() => switchTab("neuro")}
-              >
-                Neuroscience
-              </button>
-              <button
-                className="px-8 py-3 rounded-full font-label-md transition-all text-on-surface-variant hover:text-primary"
-                id="tab-simulation"
-                onClick={() => switchTab("simulation")}
-              >
-                Simulation
-              </button>
+              {(["personality", "cognitive", "neuro", "simulation"] as Tab[]).map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-8 py-3 rounded-full font-label-md transition-all ${
+                    activeTab === tab
+                      ? "bg-primary text-on-primary shadow-md"
+                      : "text-on-surface-variant hover:text-primary"
+                  }`}
+                >
+                  {tab === "personality" ? "Personality"
+                    : tab === "cognitive" ? "Cognitive"
+                    : tab === "neuro" ? "Neuroscience"
+                    : "Simulation"}
+                </button>
+              ))}
             </div>
 
             {/* Tab Contents */}
             <div id="content-container">
               {/* Personality Tab */}
               <div
-                className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start"
+                className={`grid grid-cols-1 md:grid-cols-12 gap-gutter items-start ${activeTab !== "personality" ? "hidden" : ""}`}
                 id="personality-content"
               >
                 <div className="md:col-span-7 space-y-8">
@@ -249,7 +225,7 @@ export default function DiscoverPage() {
 
               {/* Cognitive Tab */}
               <div
-                className="hidden grid grid-cols-1 md:grid-cols-12 gap-gutter items-start"
+                className={`grid grid-cols-1 md:grid-cols-12 gap-gutter items-start ${activeTab !== "cognitive" ? "hidden" : ""}`}
                 id="cognitive-content"
               >
                 <div className="md:col-span-7 space-y-8">
@@ -323,7 +299,7 @@ export default function DiscoverPage() {
 
               {/* Neuro Tab */}
               <div
-                className="hidden grid grid-cols-1 md:grid-cols-12 gap-gutter items-start"
+                className={`grid grid-cols-1 md:grid-cols-12 gap-gutter items-start ${activeTab !== "neuro" ? "hidden" : ""}`}
                 id="neuro-content"
               >
                 <div className="md:col-span-7 space-y-8">
@@ -399,7 +375,7 @@ export default function DiscoverPage() {
 
               {/* Simulation Tab */}
               <div
-                className="hidden grid grid-cols-1 md:grid-cols-12 gap-gutter items-start"
+                className={`grid grid-cols-1 md:grid-cols-12 gap-gutter items-start ${activeTab !== "simulation" ? "hidden" : ""}`}
                 id="simulation-content"
               >
                 <div className="md:col-span-7 space-y-8">
