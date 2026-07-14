@@ -104,7 +104,7 @@ export default function RootLayout({
       <body className="bg-background text-on-surface font-body-md overflow-x-hidden">
         {children}
         <a
-          href="https://wa.me/62823112121660"
+          href="https://wa.me/6282312121660"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
