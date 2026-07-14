@@ -288,7 +288,14 @@ export default function DiscoverPage() {
                       ))}
                     </div>
                   </div>
+                </div>
 
+                <div className="md:col-span-5 space-y-6">
+                  <div className="rounded-xl border border-outline-variant bg-surface-container-low aspect-video flex items-center justify-center">
+                    <p className="text-on-surface-variant font-label-sm">
+                      Cognitive Games Screenshot
+                    </p>
+                  </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="bg-inverse-surface text-surface-bright p-8 rounded-2xl">
                       <p className="font-label-sm uppercase mb-4 opacity-70">
@@ -310,14 +317,6 @@ export default function DiscoverPage() {
                         <li>• Unlimited scalability</li>
                       </ul>
                     </div>
-                  </div>
-                </div>
-
-                <div className="md:col-span-5 space-y-6">
-                  <div className="rounded-xl border border-outline-variant bg-surface-container-low aspect-video flex items-center justify-center">
-                    <p className="text-on-surface-variant font-label-sm">
-                      Cognitive Games Screenshot
-                    </p>
                   </div>
                 </div>
               </div>
