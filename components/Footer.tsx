@@ -30,7 +30,7 @@ export default function Footer() {
             <li>
               <a
                 className="text-secondary-fixed-dim/80 hover:text-primary-fixed transition-colors font-label-sm text-label-sm"
-                href="#"
+                href="/discover"
               >
                 Discover
               </a>
@@ -38,7 +38,7 @@ export default function Footer() {
             <li>
               <a
                 className="text-secondary-fixed-dim/80 hover:text-primary-fixed transition-colors font-label-sm text-label-sm"
-                href="#"
+                href="/enhance"
               >
                 Enhance
               </a>
@@ -53,7 +53,7 @@ export default function Footer() {
             <li>
               <a
                 className="text-secondary-fixed-dim/80 hover:text-primary-fixed transition-colors font-label-sm text-label-sm"
-                href="#"
+                href="/about"
               >
                 About Us
               </a>
@@ -61,7 +61,7 @@ export default function Footer() {
             <li>
               <a
                 className="text-secondary-fixed-dim/80 hover:text-primary-fixed transition-colors font-label-sm text-label-sm"
-                href="#"
+                href="/insights"
               >
                 Insights
               </a>
@@ -69,7 +69,7 @@ export default function Footer() {
             <li>
               <a
                 className="text-secondary-fixed-dim/80 hover:text-primary-fixed transition-colors font-label-sm text-label-sm"
-                href="#"
+                href="/contact"
               >
                 Contact
               </a>

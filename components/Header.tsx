@@ -33,7 +33,7 @@ export default function Header() {
             <div className="dropdown-content border border-outline-variant/30">
               <a
                 className="block px-md py-sm hover:bg-surface-container-low transition-colors text-label-md"
-                href="#"
+                href="/discover"
               >
                 Discover
               </a>
