@@ -19,7 +19,7 @@ export default function Header() {
       }`}
     >
       <div className="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
-        <div className="flex items-center">
+        <a href="/" className="flex items-center">
           <Image
             src="/deus-logo.jpg"
             alt="DEUS"
@@ -28,7 +28,7 @@ export default function Header() {
             className="h-12 w-auto object-contain"
             priority
           />
-        </div>
+        </a>
 
         <nav className="hidden md:flex items-center gap-xl">
           <div className="relative dropdown">
