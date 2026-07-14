@@ -135,7 +135,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-container-max mx-auto px-gutter w-full">
         <div className="max-w-2xl">
           <h1 className="font-display-lg text-display-lg mb-md leading-tight text-on-surface">
-            Stop Making HR Decisions Based on Gut Feeling
+            Build a Team That Performs
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant mb-xl leading-relaxed">
             DEUS helps Indonesian companies hire smarter and develop talent
